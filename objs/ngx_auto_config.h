@@ -1,0 +1,108 @@
+
+#ifndef NGX_COMPILER
+#define NGX_COMPILER  "gcc 11.2.0 (GCC) "
+#endif
+
+END
+
+#ifndef NGX_HAVE_GCC_ATOMIC
+#define NGX_HAVE_GCC_ATOMIC  1
+#endif
+
+END
+
+#ifndef NGX_HAVE_C99_VARIADIC_MACROS
+#define NGX_HAVE_C99_VARIADIC_MACROS  1
+#endif
+
+END
+
+#ifndef NGX_HAVE_GCC_VARIADIC_MACROS
+#define NGX_HAVE_GCC_VARIADIC_MACROS  1
+#endif
+
+END
+
+#ifndef NGX_COMPILER
+#define NGX_COMPILER  "gcc 11.2.0 (GCC) "
+#endif
+
+END
+
+#ifndef NGX_PREFIX
+#define NGX_PREFIX  "/usr/local/nginx/"
+#endif
+
+END
+
+#ifndef NGX_CONF_PREFIX
+#define NGX_CONF_PREFIX  "conf/"
+#endif
+
+END
+
+#ifndef NGX_SBIN_PATH
+#define NGX_SBIN_PATH  ""
+#endif
+
+END
+
+#ifndef NGX_CONF_PATH
+#define NGX_CONF_PATH  "conf/nginx.conf"
+#endif
+
+END
+
+#ifndef NGX_PID_PATH
+#define NGX_PID_PATH  "logs/nginx.pid"
+#endif
+
+END
+
+#ifndef NGX_LOCK_PATH
+#define NGX_LOCK_PATH  "logs/nginx.lock"
+#endif
+
+END
+
+#ifndef NGX_ERROR_LOG_PATH
+#define NGX_ERROR_LOG_PATH  "logs/error.log"
+#endif
+
+END
+
+#ifndef NGX_HTTP_LOG_PATH
+#define NGX_HTTP_LOG_PATH  "logs/access.log"
+#endif
+
+END
+
+#ifndef NGX_HTTP_CLIENT_TEMP_PATH
+#define NGX_HTTP_CLIENT_TEMP_PATH  "client_body_temp"
+#endif
+
+END
+
+#ifndef NGX_HTTP_PROXY_TEMP_PATH
+#define NGX_HTTP_PROXY_TEMP_PATH  "proxy_temp"
+#endif
+
+END
+
+#ifndef NGX_HTTP_FASTCGI_TEMP_PATH
+#define NGX_HTTP_FASTCGI_TEMP_PATH  "fastcgi_temp"
+#endif
+
+END
+
+#ifndef NGX_HTTP_UWSGI_TEMP_PATH
+#define NGX_HTTP_UWSGI_TEMP_PATH  "uwsgi_temp"
+#endif
+
+END
+
+#ifndef NGX_HTTP_SCGI_TEMP_PATH
+#define NGX_HTTP_SCGI_TEMP_PATH  "scgi_temp"
+#endif
+
+END

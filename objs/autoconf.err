@@ -1,0 +1,644 @@
+
+----------------------------------------
+checking for C compiler
+
+END
+
+ngx_found=no
+
+if test -n ""; then
+    ngx_have_feature=
+fi
+
+if test -n ""; then
+    for ngx_temp in ; do
+        ngx_feature_inc_path=" -I "
+    done
+fi
+
+cat << END > objs/autotest.c
+
+#include <sys/types.h>
+
+
+
+int main() {
+    ;
+    return 0;
+}
+
+END
+
+
+ngx_test="cc    \
+          -o objs/autotest objs/autotest.c  "
+
+ngx_feature_inc_path=
+
+eval "/bin/sh -c \"\" >> objs/autoconf.err 2>&1"
+
+
+if [ -x objs/autotest ]; then
+
+    case "yes" in
+
+        yes)
+            # /bin/sh is used to intercept "Killed" or "Abort trap" messages
+            if /bin/sh -c objs/autotest >> objs/autoconf.err 2>&1; then
+                echo " found"
+                ngx_found=yes
+
+                if test -n ""; then
+                    have= . auto/have
+                fi
+
+            else
+                echo " found but is not working"
+            fi
+        ;;
+
+        value)
+            # /bin/sh is used to intercept "Killed" or "Abort trap" messages
+            if /bin/sh -c objs/autotest >> objs/autoconf.err 2>&1; then
+                echo " found"
+                ngx_found=yes
+
+                cat << END >> objs/ngx_auto_config.h
+
+#ifndef 
+#define   
+#endif
+
+END
+            else
+                echo " found but is not working"
+            fi
+        ;;
+
+        bug)
+            # /bin/sh is used to intercept "Killed" or "Abort trap" messages
+            if /bin/sh -c objs/autotest >> objs/autoconf.err 2>&1; then
+                echo " not found"
+
+            else
+                echo " found"
+                ngx_found=yes
+
+                if test -n ""; then
+                    have= . auto/have
+                fi
+            fi
+        ;;
+
+        *)
+            echo " found"
+            ngx_found=yes
+
+            if test -n ""; then
+                have= . auto/have
+            fi
+        ;;
+
+    esac
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo        >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for C compiler
+
+END
+
+ngx_found=no
+
+if test -n ""; then
+    ngx_have_feature=
+fi
+
+if test -n ""; then
+    for ngx_temp in ; do
+        ngx_feature_inc_path=" -I "
+    done
+fi
+
+cat << END > objs/autotest.c
+
+#include <sys/types.h>
+
+
+
+int main() {
+    ;
+    return 0;
+}
+
+END
+
+
+ngx_test="cc    \
+          -o objs/autotest objs/autotest.c  "
+
+ngx_feature_inc_path=
+
+eval "/bin/sh -c \"\" >> objs/autoconf.err 2>&1"
+
+
+if [ -x objs/autotest ]; then
+
+    case "yes" in
+
+        yes)
+            # /bin/sh is used to intercept "Killed" or "Abort trap" messages
+            if /bin/sh -c objs/autotest >> objs/autoconf.err 2>&1; then
+                echo " found"
+                ngx_found=yes
+
+                if test -n ""; then
+                    have= . auto/have
+                fi
+
+            else
+                echo " found but is not working"
+            fi
+        ;;
+
+        value)
+            # /bin/sh is used to intercept "Killed" or "Abort trap" messages
+            if /bin/sh -c objs/autotest >> objs/autoconf.err 2>&1; then
+                echo " found"
+                ngx_found=yes
+
+                cat << END >> objs/ngx_auto_config.h
+
+#ifndef 
+#define   
+#endif
+
+END
+            else
+                echo " found but is not working"
+            fi
+        ;;
+
+        bug)
+            # /bin/sh is used to intercept "Killed" or "Abort trap" messages
+            if /bin/sh -c objs/autotest >> objs/autoconf.err 2>&1; then
+                echo " not found"
+
+            else
+                echo " found"
+                ngx_found=yes
+
+                if test -n ""; then
+                    have= . auto/have
+                fi
+            fi
+        ;;
+
+        *)
+            echo " found"
+            ngx_found=yes
+
+            if test -n ""; then
+                have= . auto/have
+            fi
+        ;;
+
+    esac
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo        >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for unistd.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <unistd.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=unistd.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <unistd.h>'"
+
+    #STUB
+    eval "NGX_='#include <unistd.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for inttypes.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <inttypes.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=inttypes.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <inttypes.h>'"
+
+    #STUB
+    eval "NGX_='#include <inttypes.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for limits.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <limits.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=limits.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <limits.h>'"
+
+    #STUB
+    eval "NGX_='#include <limits.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for sys/filio.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <sys/filio.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=sys/filio.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <sys/filio.h>'"
+
+    #STUB
+    eval "NGX_='#include <sys/filio.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for sys/param.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <sys/param.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=sys/param.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <sys/param.h>'"
+
+    #STUB
+    eval "NGX_='#include <sys/param.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for sys/mount.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <sys/mount.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=sys/mount.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <sys/mount.h>'"
+
+    #STUB
+    eval "NGX_='#include <sys/mount.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for sys/statvfs.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <sys/statvfs.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=sys/statvfs.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <sys/statvfs.h>'"
+
+    #STUB
+    eval "NGX_='#include <sys/statvfs.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
+
+----------------------------------------
+checking for crypt.h
+
+END
+
+
+ngx_found=no
+
+cat << END > objs/autotest.c
+
+
+#include <crypt.h>
+
+int main() {
+    return 0;
+}
+
+END
+
+
+ngx_test="cc -o objs/autotest objs/autotest.c"
+
+eval "cc                -o objs/autotest objs/autotest.c   >> objs/autoconf.err 2>&1"
+
+if [ -x objs/autotest ]; then
+
+    ngx_found=yes
+
+    echo " found"
+
+    ngx_name=crypt.h 
+
+
+    have=NGX_HAVE_ . auto/have_headers
+
+    eval "NGX_INCLUDE_='#include <crypt.h>'"
+
+    #STUB
+    eval "NGX_='#include <crypt.h>'"
+
+else
+    echo " not found"
+
+    echo "----------"    >> objs/autoconf.err
+    cat objs/autotest.c  >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+    echo cc                -o objs/autotest objs/autotest.c         >> objs/autoconf.err
+    echo "----------"    >> objs/autoconf.err
+fi
+
+rm -rf objs/autotest*
